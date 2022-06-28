@@ -21,3 +21,6 @@ print(name[3:])
 
 for letra in name:
     print(letra)
+    print("dentro do for")
+
+print("saindo do for / fora da identação")
