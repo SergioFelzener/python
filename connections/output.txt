@@ -1,0 +1,1 @@
+Testando envio de texto para dentro do arquivo output.txt
