@@ -1,6 +1,13 @@
 import dns.resolver
 import sys
+
 resolver = dns.resolver.Resolver()
+
+# try:
+#     target
+
+# except:
+    
 
 target = "bancocn.com"
 
