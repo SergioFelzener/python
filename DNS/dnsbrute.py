@@ -30,8 +30,9 @@ for subdomain in subdomains:
         for result in results:
             print("{} -> {}".format(sub_target, result))
     except Exception as error:
-        print("Subdomain does not exist")
-        print(error)
+        pass
+        # print("Subdomain does not exist")
+        # print(error)
         
 
 
