@@ -3,17 +3,19 @@ import sys
 
 resolver = dns.resolver.Resolver()
 
-# try:
-#     target
+try:
+    target = sys.argv[1]
+    wordlist = sys.argv[2]
 
-# except:
+except:
+    print("Falta argumento")
     
 
 target = "bancocn.com"
 
 #wordlist = ["teste", "advanced", "shop", "admin", "panel", "mysql", "ftp", "smtp", "control", "api"]
 try:
-    with open("wordlist.txt", "r") as file:    # Use crunch to generate your wordlist file =/
+    with open(wordlist, "r") as file:    # Use crunch to generate your wordlist file =/
         subdomains = file.read().splitlines()
 except Exception as error:
     print("File not found")
