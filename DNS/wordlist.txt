@@ -2,3 +2,10 @@ advanced
 shop
 admin
 control
+mysql
+dev
+mx
+tcp
+ftp
+stfp
+

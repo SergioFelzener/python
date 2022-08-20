@@ -8,10 +8,11 @@ try:
     wordlist = sys.argv[2]
 
 except:
-    print("Error: Missing Arguments use\n dnsbrute.py target.com wordlist.txt")
+    print("Error: Missing Arguments use syntax:\ndnsbrute.py target.com wordlist.txt")
+    sys.exit()
     
 
-target = "bancocn.com"
+# target = "bancocn.com"
 
 #wordlist = ["teste", "advanced", "shop", "admin", "panel", "mysql", "ftp", "smtp", "control", "api"]
 try:
