@@ -8,7 +8,7 @@ try:
     wordlist = sys.argv[2]
 
 except:
-    print("Falta argumento")
+    print("Error: Missing Arguments use\n dnsbrute.py target.com wordlist.txt")
     
 
 target = "bancocn.com"
