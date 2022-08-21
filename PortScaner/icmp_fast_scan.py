@@ -8,7 +8,7 @@ from threading import Thread
 SIGNAL = True
 
 
-def checksum(source_string):
+def checksum(source_string): ## faz parte do programa ping do linux.
     sum = 0
     count_to = (len(source_string) / 2) * 2
     count = 0
@@ -25,7 +25,7 @@ def checksum(source_string):
     answer = ~sum
     answer = answer & 0xffff
     answer = answer >> 8 | (answer << 8 & 0xff00)
-    return answer
+    return answer # retorna resposta para criacao do header do pacote
 
 
 def create_packet(id):
