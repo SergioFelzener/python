@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Edit Post</title>
 </head>
 <body>
-   <!--<h1>Olá : {{name}}</h1>-->
-<h1>BLOG</h1>
-    <form method="POST" action="{{url_for('add_post')}}">
+    <h1>EDIT POST</h1>
+    <form method="POST" action="{{url_for('edit_post', id=post.id)}}">
         <label>Title</label>
         <input name="title"></br>
         <label>Author</label>
@@ -19,16 +18,7 @@
         <input type="submit" value="submit"></br>
     </form>
     <hr>
-    {%for post in posts %}
-        <h2>{{post.id}}</h2>
-        <label>{{post.title}}</label>
-        <p>{{post.author}}</p>
-        <a href="{{ url_for('edit_post', id=post.id)}}">Edit</a>
-        <a href="{{ url_for('delete_post', id=post.id)}}">Delete</a>
-        <hr>
-        <div>{{post.content}}</div>
-    {% endfor %}
-    
+
+
 </body>
 </html>
-
