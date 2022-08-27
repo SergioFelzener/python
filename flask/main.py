@@ -141,7 +141,15 @@ try:
             print("Error edit :", error)
             
             return jsonify({"Success : " : False})
-          
+    
+    @app.after_request
+    def add_header(response):
+        response.headers["X-Frame-Options"] = "DENY"
+        response.headers["Content-Security-Policy"] = "script-src 'unsafe-inline';"
+        response.headers["Access-Control-Allow-Origin"] = "http://example.com" #permite que apenas o example . com possa realizar scripts na pagina
+        # response.headers["Access-Control-Allow-Credentials"] = "true" # muito perigoso a ma configuração 
+        return response
+        
     db.create_all()
     app.run(debug=True)
 except Exception as error:
