@@ -1,0 +1,9 @@
+admin
+panel
+noticias
+control
+search
+login
+busca
+painel
+
