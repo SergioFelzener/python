@@ -3,7 +3,7 @@ import requests
 EMAILS = []
 
 for i in range(36):
-    response = requests.get("http://10.10.110.200/rest/products/{}/reviews".format(i))
+    response = requests.get("http://shop.bancocn.com/rest/products/{}/reviews".format(i))
     data_json = response.json()
     for review in data_json["data"]:
         email = review["author"]
