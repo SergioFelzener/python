@@ -18,7 +18,7 @@ print("--------------------------------")
 print(" ")
 
 with open("wordlist.txt", "r") as file:
-    wordlist = file.read().splitlines()
+    wordlist = file.read().splitlines() # resolvedo quebra de linha 
     
     for word in wordlist:
         data = {"user" : "admin", "password" : word}
