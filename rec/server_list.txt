@@ -1,0 +1,7 @@
+https://qa-01.receiv.it/html/new/login
+https://qa-02.receiv.it/html/new/login
+https://qa-03.receiv.it/html/new/login
+https://qa-04.receiv.it/html/new/login
+https://qa-05.receiv.it/html/new/login
+https://qa-06.receiv.it/html/new/login
+https://qa-07.receiv.it/html/new/login
