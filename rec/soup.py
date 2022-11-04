@@ -12,12 +12,11 @@ with open("server_list.txt", "r") as file:
             status = response.status_code
             # print(status)
             site = BeautifulSoup(content, 'html.parser')
-            time.sleep(1)
             login_rec = site.find('div', attrs={'class': 'login-content'})
             if login_rec != "":
-                print("Server => {} Status code-> {}".format(server, status))
+                print("Server => {} *** Status code-> {} ***".format(server, status))
             else:
-                print("Server => {} Status code-> {}".format(server, status))
+                print("Server => {} *** Status code-> {} ***".format(server, status))
         except Exception as error:
             print("SERVER IS DOWN ->  {}".format(server))
             pass
