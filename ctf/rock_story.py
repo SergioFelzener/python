@@ -32,7 +32,7 @@ while 1:
                 
             
     qrcode = ImageOps.expand(qrcode, border=3, fill="white")
-    # qrcode.save("qrcode.png")
+    # qrcode.save("qrcode3.png")
     # print(pyzbar.decode(qrcode)[0][0])
     s.send(pyzbar.decode(qrcode)[0][0])
     print(s.recv(1000000))
